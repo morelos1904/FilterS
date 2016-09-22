@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="js/module.js"></script>
+<body ng-app="app">
+  
+  
+  
+	<p>{{"AngularJS" | lowercase}}</p>
+	<p>{{1000.12345 | number:2}}</p>	<!-- It accepts two numbers after the decimal point -->
+	<p>{{1234567.12345 | number:-2}}</p>	<!-- It rounds the number the tow last numbers --> 
+	<p>{{1234567.12345 | currency:$}}</p>	<!-- It formats the number as money and add a pesos sign --> 
+     
+	<p ng-controller="DateController">{{now | date:"medium"}}</p>	<!-- It formats the number as money and add a pesos sign --> 
+  
+  
+</body>
+
+</html>

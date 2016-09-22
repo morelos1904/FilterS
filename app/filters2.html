@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<script src="../bower_components/angular/angular.js"></script>
+
+
+<script src="js/item-controllers.js"></script>
+<script src="js/item-value.js"></script>
+
+	
+<body ng-app="app">
+  
+  
+<ol ng-controller="ItemsController">		<!-- It matches with all the properties which contain the value '3' -->
+  <li ng-repeat="item in items | filter:3 ">
+     {{item.name}}
+  </li>   
+</ol>
+
+
+<ol ng-controller="ItemsController">			<!-- It shows only those object which contain the value 3 in the position property -->
+  <li ng-repeat="item in items | filter:{position:3} ">
+     {{item.name}}
+  </li>
+</ol>
+
+</body>
+
+</html>

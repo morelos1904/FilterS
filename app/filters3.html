@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<script src="../bower_components/angular/angular.js"></script>
+
+<script src="js/filtered-items-controller.js"></script>
+<script src="js/item-value.js"></script>
+<script src="js/locale-value.js"></script>	
+<body ng-app="app">
+ 
+
+<h4>Red Items</h4>  
+<ol ng-controller="ItemsController">	
+  <li ng-repeat="item in redItems ">
+     {{item.name}}
+  </li>
+</ol>
+
+<h4>Emoticon</h4>  
+<ol ng-controller="ItemsController">	
+  <li ng-repeat="item in items ">
+     {{item.name | smiley }}
+  </li>
+</ol>
+
+<h4>Greeting</h4>  
+<p>
+  The app says <strong ng-bind="'greeting' | localize"></strong>.
+</p>
+
+</body>
+
+</html>
